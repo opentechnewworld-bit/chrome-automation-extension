@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoPilot Publisher</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🚀 AutoPilot</h1>
+      <p>Affiliate Link Publisher</p>
+    </div>
+
+    <div class="main-section">
+      <div class="input-section">
+        <label for="affiliateLink">Paste Affiliate Link:</label>
+        <input 
+          type="text" 
+          id="affiliateLink" 
+          placeholder="https://amazon.com/dp/..."
+          class="input-field"
+        >
+        <small>Supports Amazon, eBay, and direct URLs</small>
+      </div>
+
+      <div class="button-group">
+        <button id="extractBtn" class="btn btn-primary">📊 Extract Product Info</button>
+      </div>
+
+      <div id="productPreview" class="product-preview hidden">
+        <h3>Product Preview</h3>
+        <div class="preview-content">
+          <img id="productImage" src="" alt="Product" class="preview-image">
+          <div class="preview-details">
+            <p><strong id="productTitle"></strong></p>
+            <p id="productPrice" class="price"></p>
+            <p id="productDescription"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="publish-section">
+        <h3>Publish To:</h3>
+        <div class="checkbox-group">
+          <label>
+            <input type="checkbox" id="publishWebsite" checked>
+            Website/Store
+          </label>
+          <label>
+            <input type="checkbox" id="publishPinterest" checked>
+            Pinterest
+          </label>
+        </div>
+      </div>
+
+      <div class="settings-section">
+        <label for="websiteUrl">Website URL:</label>
+        <input 
+          type="text" 
+          id="websiteUrl" 
+          placeholder="https://yourstore.com/products"
+          class="input-field"
+        >
+
+        <label for="pinterestBoard">Pinterest Board:</label>
+        <select id="pinterestBoard" class="input-field">
+          <option value="">Select board...</option>
+        </select>
+
+        <label for="productTitle">Custom Title (optional):</label>
+        <input 
+          type="text" 
+          id="customTitle" 
+          placeholder="Auto-generated title will be used"
+          class="input-field"
+        >
+      </div>
+
+      <button id="publishBtn" class="btn btn-success btn-large">✨ Publish Now</button>
+
+      <div id="status" class="status-message hidden"></div>
+    </div>
+  </div>
+
+  <script src="utils.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

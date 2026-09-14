@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "AutoPilot - Affiliate Publisher",
+  "version": "1.0.0",
+  "description": "Paste affiliate link once, publish to website & Pinterest with one click",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage",
+    "webRequest"
+  ],
+  "host_permissions": [
+    "https://*/*",
+    "http://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "AutoPilot Publisher"
+  },
+  "icons": {
+    "16": "images/icon-16.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  }
+}
